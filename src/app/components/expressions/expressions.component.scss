@@ -126,7 +126,16 @@
 @media screen and (max-width: 767px) {
   .expression-wrapper {
     text-align: center;
-
+    .expression-content-section{
+      .expression-main-wrapper{
+        .rules-wrapper{
+          .inner-wrapper{
+            border: 0;
+          }    
+        }
+      }
+    }
+  
     .title-section {
       .right-wrapper {
         .inner-wrapper {

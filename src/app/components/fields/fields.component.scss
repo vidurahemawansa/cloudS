@@ -50,7 +50,7 @@
           }
         }
       }
-      &.selected {
+      &:first-of-type {
         margin: 0 -15px 5px 0;
         background: #5f62f6;
         color: #fff;

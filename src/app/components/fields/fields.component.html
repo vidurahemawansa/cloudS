@@ -4,49 +4,13 @@
         <input type="text" class="form-control" placeholder="Search Fields/ Elements">
     </div>
     <ul class="field-list">
-        <li class="selected clear-a">
-            <i class="fa fa-venus-mars" aria-hidden="true"></i>
+        <li class="clear-a" *ngFor="let field of details">
+            <i class="fa {{field.icon}}" aria-hidden="true"></i>
             <div class="float-l text-content">
-                <span class="field-name">Expected age</span>
-                <span class="description">Text field</span>
+                <span class="field-name">{{field.name}}</span>
+                <span class="description">{{field.type}}</span>
             </div>
-        </li>
-        <li class="clear-a">
-            <i class="fa fa-venus-mars" aria-hidden="true"></i>
-            <div class="float-l text-content">
-                <span class="field-name">Gender</span>
-                <span class="description">Text field</span>
-            </div>
-        </li>
-        <li class="clear-a">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            <div class="float-l text-content">
-                <span class="field-name">Expected Date</span>
-                <span class="description">Text field</span>
-            </div>
-        </li>
-        <li class="clear-a">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <div class="float-l text-content">
-                <span class="field-name">Expected Time</span>
-                <span class="description">Text field</span>
-            </div>
-        </li>
-        
-        <li class="clear-a">
-            <i class="fa fa-floppy-o" aria-hidden="true"></i>
-            <div class="float-l text-content">
-                <span class="field-name">Save</span>
-                <span class="description">Text field</span>
-            </div>
-        </li>
-        <li class="clear-a">
-            <i class="fa fa-ban" aria-hidden="true"></i>
-            <div class="float-l text-content">
-                <span class="field-name">Cancel</span>
-                <span class="description">Text field</span>
-            </div>
-        </li>
+        </li>        
     </ul>
     <p class="results">09 of 20 Results</p>
     <div class="pagination-wrapper clear-a">

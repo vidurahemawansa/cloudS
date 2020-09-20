@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Expected Age",
+        "type": "text field",
+        "icon": "fa-venus-mars"
+    },
+    {
+        "name": "Gender",
+        "type": "text field",
+        "icon": "fa-venus-mars"
+    },
+    {
+        "name": "Expected Date",
+        "type": "text field",
+        "icon": "fa-calendar"
+    },
+    {
+        "name": "Expected Time",
+        "type": "text field",
+        "icon": "fa-clock-o"
+    },
+    {
+        "name": "Expected Mode of Arrival",
+        "type": "text field",
+        "icon": "fa-folder-o"
+    }
+]
+
