@@ -1,4 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./init";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::placeholder {
+  color: #979797;
+  opacity: 1; /* Firefox */
+  font-size: 11px;
+  font-family: $reg-font;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #979797;
+  font-size: 11px;
+  font-family: $reg-font;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #979797;
+  font-size: 11px;
+  font-family: $reg-font;
+}
+.float-l{
+    float: left;
+}
+.float-r{
+    float: right;
+}
+.clear-a:after{
+    clear:both;
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+}
+h1,h2,h3{
+  font-weight: normal;
+  font-family: $bold-font;
+}
+
+.btn{
+  line-height: 40px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-family: $reg-font;
+  &.btn-primary{
+    background: $primary-btn-bg;
+    border: 1px solid $primary-btn-bg;
+  }
+  &.btn-secondary{
+    background: $secondary-btn-bg;
+    border: 1px solid $secondary-btn-bg;
+  }
+  &.btn-cancel, &.btn-border{
+    border: 1px solid $cancel-bg;
+    color: $blue-text;
+  }
+}
+
+input,select, .form-control{
+  font-size: 1.05em;
+  padding: 0 0 0 5px;
+  height: 40px;
+  border-radius: 0;
+  border:1px solid $field-border-color;
+  color: $input-font-color;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  font-family: $reg-font;
+  font-size: 12px;
+  font-weight: normal;
+  background: $body-bg;
+}
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  .menu-wrapper {
+    flex: 0 0 58px;
+    background: #cabea2;
+    box-sizing: border-box;
+    padding: 0 14px;
+    min-height: calc(100vh - 58px);
+    .fa-window-close-o{
+      position: fixed;
+      right: 5px;
+      top: 5px;
+      color: #000;
+      font-size: 35px;
+      text-shadow: 0 0 5px #fff;
+      display: none;
+    }
+  }
+  .content-wrapper {
+    flex: 0 0 calc(100% - 60px);
+    padding: 0 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .middle-section {
+    .menu-wrapper {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(202,190,162,.9);
+      z-index: 1;
+      .fa-window-close-o{
+        display: block;
+      }
+    }
+    .content-wrapper {
+      flex: 0 0 100%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.main-menu {
+  ul {
+    list-style: none;
+    margin: 23px 0 0;
+    padding: 0;
+    li {
+      display: block;
+      margin: 0 0 12px;
+      a {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: #8c7e5b;
+        text-align: center;
+        color: #fff;
+        &:hover {
+          opacity: 0.9;
+        }
+        i {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-menu {
+      display: block;
+      margin: 50px 0 0;
+  }
+}

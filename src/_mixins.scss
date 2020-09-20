@@ -1,0 +1,53 @@
+@import "./init";
+
+@mixin input-search-icon {
+  position: absolute;
+  color: $theme-light-gray;
+  font-size: 21px;
+}
+@mixin search-field {
+  width: 100%;
+  background: #fbfbfb;
+  border: 1px solid #ececec;
+  border-radius: 0;
+  font-size: 1em;
+}
+
+@mixin light-blue-btn {
+  font-weight: normal;
+  color: $blue-text;
+  border: 1px solid $blue-border;
+  background: $light-blue;
+  padding: 0 24px;
+  font-size: 0.95em;
+  height: 25px;
+  border-radius: 5px;
+  line-height: 25px;
+  display: inline-block;
+  font-family: $med-font;
+}
+
+@mixin blue-operator-btn {
+  background: $blue-btn;
+  color: #fff;
+  border: 1px solid $blue-btn;
+}
+@mixin operator-btn {
+  border-radius: 0;
+  line-height: 32px;
+  height: 32px;
+  padding: 0;
+  text-align: center;
+  font-size: 0.85em;
+  border: 1px solid $cancel-bg;
+  background: #fff;
+  color: $blue-text;
+}
+@mixin small-border-btns {
+  height: 32px;
+  line-height: 32px;
+  font-size: 0.95em;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 0;
+}

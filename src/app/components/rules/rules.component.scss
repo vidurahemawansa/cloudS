@@ -1,0 +1,166 @@
+@import "../../../init";
+@import "../../../mixins";
+
+.rules-wrapper {
+  background: #fbfcfd;
+  padding: 45px 15px 10px;
+  .rule-area {
+    border: 1px solid $rule-border-color;
+    padding: 13px 15px 10px;
+    background: #fff;
+    position: relative;
+    margin: 10px 0 45px;
+    text-align: left;
+    &.inactive {
+      border: 1px solid $rule-border-bg;
+    }
+    .rule-btn {
+      @include light-blue-btn;
+    }
+    .rule-top-section {
+      position: absolute;
+      right: -1px;
+      top: -30px;
+      background: #fff;
+      border: 1px solid $rule-border-color;
+      border-bottom: 0;
+      height: 30px;
+      border-top-left-radius: 8px;
+      width: 136px;
+      border-top-right-radius: 8px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 9px 0 0;
+      &.hidden {
+        display: none;
+      }
+      i {
+        margin: 0 auto;
+        color: $pag-dark-text;
+      }
+    }
+    .btn-wrapper {
+      margin: 12px 0 25px;
+      .operator-wrapper {
+        .btn {
+          @include operator-btn;
+          text-transform: uppercase;
+          width: 44px;
+          &.selected {
+            @include blue-operator-btn;
+          }
+          &.rad-l {
+            border-radius: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+          &.rad-r {
+            border-radius: 0;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+        }
+      }
+      .rule-btns {
+        .btn-border {
+          @include small-border-btns;
+          width: 75px;
+          margin: 0 8px 0 0;
+          &.last {
+            margin: 0;
+          }
+        }
+        &.disabled {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  .draggable-area {
+    margin: 20px 0 10px;
+    padding: 15px 15px;
+    border: 1px solid $rule-border-bg;
+    .form-control {
+      max-width: 39%;
+      border: 1px solid $field-border-color;
+    }
+    .operator {
+      border: 1px solid $field-border-color;
+      height: 40px;
+      font-size: 24px;
+      margin: 0 12px;
+      padding: 0 17px;
+      color: $input-font-color;
+    }
+    i {
+      font-size: 15px;
+      margin: 12px 0 0;
+      color: $pag-dark-text;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .rules-wrapper {
+    .operator-wrapper {
+      z-index: 1;
+      position: relative;
+    }
+    .draggable-area {
+      margin: 14px 0px 14px 65px;
+      &::before {
+        display: block;
+        content: "";
+        height: 86px;
+        border-left: 1px solid $rule-border-bg;
+        margin: -66px 0 0 -38px;
+        position: absolute;
+        left: auto;
+        z-index: 0;
+        top: auto;
+        width: 22px;
+        border-bottom: 1px solid $rule-border-bg;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .rules-wrapper {
+    .draggable-area {
+      margin: 20px 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .rules-wrapper {
+    background: none;
+    border: 0;
+    padding: 20px 0 10px;
+    margin: 10px 0 0;
+    .draggable-area {
+      margin: 20px 0 10px;
+      text-align: center;
+      position: relative;
+      .form-control {
+        float: none;
+        max-width: 90%;
+        margin: 0;
+      }
+      .operator {
+        margin: 10px auto;
+        float: none;
+      }
+      i {
+        position: absolute;
+        font-size: 25px;
+        right: 10px;
+        top: 50%;
+        margin: -12px 0 0;
+      }
+    }
+  }
+}

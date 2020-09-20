@@ -1,0 +1,44 @@
+<div class="expression-wrapper container-fluid">
+    <div class="row title-section">
+        <div class="col-md-12 col-24 left-wrapper">
+            <h3>Expression Builder</h3>
+            <p>Last Updated by <a href="">Super Admin</a> at <a href="">9:30am Today</a></p>
+        </div>
+        <div class="col-md-12 col-24 right-wrapper">
+            <div class="inner-wrapper">
+                <button class="btn btn-primary submit">Save</button>
+                <button class="btn btn-secondary submit">Save as Draft</button>
+                <button class="btn btn-cancel submit">Back to Dashboard</button>
+            </div>
+        </div>
+    </div>
+    <div class="row expression-content-section">
+        <div class="filter-wrapper container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-24 filters">
+                    <select class="form-control">
+                        <option>Select Module</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-md-8 col-24 filters">
+                    <select class="form-control">
+                        <option>Pre-Register Form</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="expression-main-wrapper container-fluid">
+            <div class="row">
+                <div class="col-xl-5 col-lg-7 col-24 fields-wrapper">
+                    <app-fields class="inner-wrapper rad-l"></app-fields>
+                </div>
+                <div class="col-xl-13 col-lg-17 col-24 rules-wrapper">
+                    <app-rules class="inner-wrapper"></app-rules>
+                </div>
+                <div class="col-xl-6 col-lg-24 col-24 actions-wrapper">
+                    <app-actions class="inner-wrapper rad-r"></app-actions>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
